@@ -1,0 +1,16 @@
+server:
+ port: 9092
+spring:
+ application:
+  name: USTEurekaZuul
+zuul:
+ routes:
+  demo:
+   path: /getDataFromCloud
+   service-id: USTEurekaClient
+   strip-prefix: false
+  demo1:
+   path: /product
+   service-id: productapp
+   strip-prefix: false
+ 
